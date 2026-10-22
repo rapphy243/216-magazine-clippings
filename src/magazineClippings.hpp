@@ -25,8 +25,14 @@ bool canCreateNote(std::string note, std::vector<std::string> articles) {
         }
         charCount[c]--;
         if (charCount[c] < 0) {
+            
             return false;
         }
     }
     return true;
+}
+
+bool canCreateNote(std::string note, std::string article) {
+    std::vector<std::string> vec = { article };
+    return canCreateNote(note, vec);
 }

@@ -15,4 +15,7 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
+add_executable(magazineClippings_test ./tests/magazineClippings_test.cpp)
 add_executable(main main.cpp)
+
+target_link_libraries(magazineClippings_test PRIVATE Catch2::Catch2WithMain)
